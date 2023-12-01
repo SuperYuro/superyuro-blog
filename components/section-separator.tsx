@@ -1,5 +1,7 @@
-const SectionSeparator = () => {
-  return <hr className="border-neutral-200 mt-28 mb-24" />
-}
+import { Divider } from "@chakra-ui/react";
 
-export default SectionSeparator
+const SectionSeparator = () => {
+  return <Divider />;
+};
+
+export default SectionSeparator;

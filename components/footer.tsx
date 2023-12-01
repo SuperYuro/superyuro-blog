@@ -1,16 +1,26 @@
-import Container from "./container";
-import { EXAMPLE_PATH } from "../lib/constants";
+import { FaTwitter, FaGithub } from "react-icons/fa";
+import { Container, Flex, Text, Center, Link } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
-    <footer className="border-t bg-neutral-50 border-neutral-200">
-      <Container>
-        <div className="p-5 m-5">
-          <div className="text-center">
-            © 2023 SuperYuro. All rights reserved.
-          </div>
-        </div>
-      </Container>
+    <footer>
+      <Center
+        flexDirection={"column"}
+        padding={3}
+        marginTop={3}
+        backgroundColor={"whitesmoke"}
+      >
+        <Text>© 2023 SuperYuro. All rights reserved.</Text>
+
+        <Flex direction={"row"} marginTop={1}>
+          <Link href="https://twitter.com/YuroYuro0508" marginRight={1}>
+            <FaTwitter />
+          </Link>
+          <Link href="https://github.com/SuperYuro" marginLeft={1}>
+            <FaGithub />
+          </Link>
+        </Flex>
+      </Center>
     </footer>
   );
 };

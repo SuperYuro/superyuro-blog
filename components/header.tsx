@@ -1,14 +1,25 @@
-import Link from 'next/link'
+import { Link, Heading, Box } from "@chakra-ui/react";
+import { BLOG_NAME } from "../lib/constants";
 
 const Header = () => {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link href="/" className="hover:underline">
-        Blog
-      </Link>
-      .
-    </h2>
-  )
-}
+    <Link href="/">
+      <Box
+        bg={"whitesmoke"}
+        paddingX={50}
+        paddingY={5}
+        marginX={50}
+        borderBottomRadius={10}
+        borderWidth={1}
+        borderTopWidth={0}
+        borderColor="grey"
+      >
+        <Heading as="h2" size="xl">
+          {BLOG_NAME}
+        </Heading>
+      </Box>
+    </Link>
+  );
+};
 
-export default Header
+export default Header;

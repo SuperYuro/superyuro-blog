@@ -11,7 +11,7 @@ const PostHeader = ({ title, date }: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <Box marginBottom={3}>
+      <Box marginBottom={5}>
         <DateFormatter dateString={date} />
       </Box>
     </>

@@ -1,5 +1,5 @@
-import markdownStyles from "./markdown-styles.module.css";
-import { Box } from "@chakra-ui/react";
+import ChakraUIRenderer from "chakra-ui-markdown-renderer";
+import ReactMarkdown from "react-markdown";
 
 type Props = {
   content: string;
@@ -7,12 +7,11 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
-    <Box marginX="auto">
-      <div
-        className={markdownStyles["markdown"]}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </Box>
+    <ReactMarkdown
+      components={ChakraUIRenderer()}
+      children={content}
+      skipHtml
+    />
   );
 };
 

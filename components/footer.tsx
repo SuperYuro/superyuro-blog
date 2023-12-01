@@ -1,33 +1,26 @@
-import { ReactNode } from "react";
 import { FaTwitter, FaGithub } from "react-icons/fa";
-
-type IconLinkProps = {
-  href: string;
-  children: ReactNode;
-};
-
-const IconLink = ({ href, children }: IconLinkProps) => {
-  return (
-    <a className="flex flex-row items-center justify-center m-2" href={href}>
-      {children}
-    </a>
-  );
-};
+import { Container, Flex, Text, Center, Link } from "@chakra-ui/react";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="flex flex-col items-center w-full text-center bg-slate-100">
-        <div className="mt-5">@ 2023 SuperYuro. All rights reserved.</div>
-        <div className="flex flex-row items-end mb-5">
-          <IconLink href="https://twitter.com/YuroYuro0508">
+      <Center
+        flexDirection={"column"}
+        padding={3}
+        marginTop={3}
+        backgroundColor={"whitesmoke"}
+      >
+        <Text>© 2023 SuperYuro. All rights reserved.</Text>
+
+        <Flex direction={"row"} marginTop={1}>
+          <Link href="https://twitter.com/YuroYuro0508" marginRight={1}>
             <FaTwitter />
-          </IconLink>
-          <IconLink href="https://github.com/SuperYuro">
+          </Link>
+          <Link href="https://github.com/SuperYuro" marginLeft={1}>
             <FaGithub />
-          </IconLink>
-        </div>
-      </div>
+          </Link>
+        </Flex>
+      </Center>
     </footer>
   );
 };

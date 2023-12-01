@@ -1,6 +1,16 @@
 import DateFormatter from "./date-formatter";
 import Link from "next/link";
 
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  Text,
+  Heading,
+  CardFooter,
+  Button,
+} from "@chakra-ui/react";
+
 type Props = {
   title: string;
   date: string;
@@ -10,21 +20,25 @@ type Props = {
 
 const PostPreview = ({ title, date, excerpt, slug }: Props) => {
   return (
-    <div>
-      <h3 className="mb-3 text-3xl leading-snug">
-        <Link
-          as={`/posts/${slug}`}
-          href="/posts/[slug]"
-          className="hover:underline"
+    <Link as={`/posts/${slug}`} href="/posts/[slug]">
+      <Card>
+        <CardHeader>
+          <Heading size="md">{title}</Heading>
+        </CardHeader>
+        <CardBody>
+          <Text fontSize="medium">{excerpt}</Text>
+        </CardBody>
+        <CardFooter
+          fontSize="small"
+          flexDirection="row"
+          justifyContent="space-around"
+          alignItems="center"
         >
-          {title}
-        </Link>
-      </h3>
-      <div className="mb-4 text-lg">
-        <DateFormatter dateString={date} />
-      </div>
-      <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
-    </div>
+          <DateFormatter dateString={date} />
+          <Button colorScheme="teal">Read more</Button>
+        </CardFooter>
+      </Card>
+    </Link>
   );
 };
 

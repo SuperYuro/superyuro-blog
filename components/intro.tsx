@@ -1,11 +1,12 @@
 import { BLOG_NAME } from "../lib/constants";
+import { Heading } from "@chakra-ui/react";
 
 const Intro = () => {
   return (
-    <section className="flex flex-col items-center mt-16 mb-16 md:flex-row md:justify-between md:mb-12">
-      <h1 className="text-5xl font-bold leading-tight tracking-tighter md:text-8xl md:pr-8">
+    <section>
+      <Heading as="h2" size="2xl" marginBottom={5}>
         {BLOG_NAME}
-      </h1>
+      </Heading>
     </section>
   );
 };

@@ -1,12 +1,22 @@
+import { Container as ChakraContainer, Box } from "@chakra-ui/react";
+
 type Props = {
   children?: React.ReactNode;
 };
 
 const Container = ({ children }: Props) => {
   return (
-    <div className="p-10 mx-32 my-0 bg-slate-100 dark:bg-slate-700">
+    <Box
+      bg={"whitesmoke"}
+      paddingX={50}
+      paddingY={50}
+      marginX={50}
+      borderRadius={10}
+      borderWidth={1}
+      borderColor="grey"
+    >
       {children}
-    </div>
+    </Box>
   );
 };
 

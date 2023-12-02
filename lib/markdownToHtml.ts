@@ -1,4 +1,7 @@
-// TODO: 後でどうにかする
+import { remark } from "remark";
+import html from "remark-html";
+
 export default async function markdownToHtml(markdown: string) {
-  return markdown;
+  const result = await remark().use(html).process(markdown);
+  return result.toString();
 }

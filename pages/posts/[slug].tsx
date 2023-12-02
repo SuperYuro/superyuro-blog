@@ -11,7 +11,6 @@ import Head from "next/head";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
 import { BLOG_NAME } from "../../lib/constants";
-import { Box } from "@chakra-ui/react";
 
 type Props = {
   post: PostType;
@@ -26,10 +25,6 @@ export default function Post({ post, morePosts }: Props) {
   }
   return (
     <Layout>
-      <Header />
-
-      <Box margin="10" />
-
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>

@@ -12,9 +12,9 @@ const Header = () => {
         </div>
         <div className="flex flex-col text-right">
           <Link href="/">
-            <div>All posts</div>
+            <div className="hover:underline">All posts</div>
           </Link>
-          <div>About (そのうち書く)</div>
+          <div className="hover:underline">About (そのうち書く)</div>
         </div>
       </div>
     </header>

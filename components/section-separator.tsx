@@ -1,7 +1,6 @@
-import { Divider } from "@chakra-ui/react";
 
 const SectionSeparator = () => {
-  return <Divider />;
+  return <div />;
 };
 
 export default SectionSeparator;

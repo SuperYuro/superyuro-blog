@@ -9,6 +9,10 @@
   @apply my-6;
 }
 
+.markdown li {
+  @apply list-inside list-disc;
+}
+
 .markdown h2 {
   @apply text-3xl font-semibold mt-12 mb-4 leading-snug;
 }
@@ -18,9 +22,9 @@
 }
 
 .markdown a {
-    @apply font-semibold
+  @apply font-semibold
 }
 
 .markdown a:hover {
-    @apply underline
+  @apply underline
 }

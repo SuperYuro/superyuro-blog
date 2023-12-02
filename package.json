@@ -5,7 +5,8 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc",
-    "lint": "biome lint ./**/*.{ts,tsx}"
+    "lint": "biome lint ./**/*.{ts,tsx}",
+    "format": "biome format ./**/*.{ts,tsx}"
   },
   "dependencies": {
     "classnames": "^2.3.1",

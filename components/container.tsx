@@ -1,11 +1,15 @@
+import { ReactNode } from "react";
+
 type Props = {
-  children?: React.ReactNode;
+  children?: ReactNode;
 };
 
-const Container = ({ children }: Props) => {
+const Container: React.FC = ({ children }: Props) => {
   return (
-    <div className="flex flex-row justify-center items-center p-10 bg-slate-200">
-      <div className="p-10 w-3/4 bg-white rounded-2xl">{children}</div>
+    <div className="flex flex-row justify-center items-center bg-slate-200">
+      <div className="p-10 my-10 w-full bg-white md:m-10 md:w-3/4 md:rounded-2xl">
+        {children}
+      </div>
     </div>
   );
 };
